@@ -68,7 +68,7 @@ def main():
         with open('token.pickle', 'rb') as token:
             creds = pickle.load(token)
 
-    service = build('calendar', 'v3', credentials=creds)
+    service = build('calendar', 'v3', credentials=creds,cache_discovery=False)
 
     page_token = None
     week = {}

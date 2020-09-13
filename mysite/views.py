@@ -69,21 +69,21 @@ def index(request):
     else:
         CLST = 0
         if seconds > 58200:
-            CLST = 1
+            CLST = 7
         if seconds > 54600:
-            CLST = 2
+            CLST = 6
         if seconds > 51000:
-            CLST = 3
+            CLST = 5
         if seconds > 43200:
             CLST = 4
         if seconds > 39600:
-            CLST = 5
+            CLST = 3
         if seconds > 36000:
-            CLST = 6
+            CLST = 2
         if seconds > 32400:
-            CLST = 7
+            CLST = 1
         else:
-            CLST = 7
+            CLST = 0
         daily_classes[CLST].isnowClass()
         for r in range(6):
             wd[CLST][r].isnowClass()
