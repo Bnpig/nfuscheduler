@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from mysite.views import index
+# A forced error page
+def errorpage(request):
+    raise NotImplementedError("Ha! Fooled you!")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', index, name='index'),
     path('', index, name='index'),
+    path("error", errorpage),
 ]

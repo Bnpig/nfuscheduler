@@ -83,7 +83,7 @@ def index(request):
         if seconds > 32400:
             CLST = 7
         else:
-            CLST = 8
+            CLST = 7
         daily_classes[CLST].isnowClass()
         for r in range(6):
             wd[CLST][r].isnowClass()
