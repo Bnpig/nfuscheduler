@@ -1,0 +1,129 @@
+{
+    "CSIE B":{
+        "英語聽講練習(一) 電資A班":{
+            "授課教師":"江宜樺",
+            "上課地點":"(ATD0201)普通教室",
+            "LOCATION":"ATD0201",
+            "上課時間":{
+                "星期三":[5,6]
+            },
+            "評量標準":"1. Attendance 10 % *Roll call each time we meet. *Anyone who has more than three times unexcused absences will get a “ zero” grade in your attendance. * Also remember that you are responsible for any information you miss if you are absent. If you miss a quiz, test, or presentation you cannot make it up, so please make sure to be in class on those days. *Absent students should return with excuse notes to show your teacher. 2. Class performance - -- Quiz - -- group discussion --- in class ------ overall 10% 40 % *Including class discussion, students’ participation, and other quizzes. *Hand in your assignment on time. * A quiz may be given at any time during any class period. *Your attitude, class participation, and discussion are all regarded as class performance. 4. Mid-term 25 % Both written and listening comprehension test will be given for the midterm exam 5. Final exam. 25 % Final exam. (written exam and listening test )",
+            "教科書":"New Listen in"
+        },
+        "國文(一)":{
+            "授課教師":"莊怡文",
+            "上課地點":"(ATB0102)普通教室",
+            "LOCATION":"ATB0102",
+            "上課時間":{
+                "星期二":[1,2]
+            },
+            "評量標準":"1.期中考試30% 2.期末考試30% 3.日常成績40％ （1）作業20% （2）出席與課堂表現20%",
+            "教科書":"國文新視野"
+        },
+        "微積分(一)":{
+            "授課教師":"黃妙冠",
+            "上課地點":"(ATB0202)普通教室",
+            "LOCATION":"ATB0202",
+            "上課時間":{
+                "星期一":[3],
+                "星期二":[3,4]
+            },
+            "評量標準":"日常考查(嚴禁睡覺,玩各類電子產品,看課外書,穿拖鞋,平時小考)40％ 期中會試30％， 期末會試30％",
+            "教科書":"微積分"
+        },
+        "體育(一)":{
+            "授課教師":"許高魁",
+            "上課地點":"(CPGB101)PU綜合球場",
+            "LOCATION":"CPGB101",
+            "上課時間":{
+                "星期二":[7,8]
+            },
+            "評量標準":"1.出席率占50% 註:計分方式為(出席次數/上課週次)*50，事假、病假、及參與程度欠佳者視為0.5次出席；缺課將扣1次出席次數，累計缺席三次將不及格。 2.技能測驗及比賽成績占50%。",
+            "教科書":"-"
+        },
+        "服務學習(一)":{
+            "授課教師":"黃雅惠",
+            "上課地點":"(OAA0102)虛擬教室",
+            "LOCATION":"OAA0102",
+            "上課時間":{
+                "星期四":[7,8]
+            },
+            "評量標準":"（1）「學生服務學習成果報告」成績佔40％，依學生之個人服務學習檔案、服務學習成果發表或展示由服學組評定之；（2）「實作服務學習」成績佔40％，由機構督導依實際實作服務之執行情形評定之；（3）「服務學習教育課程」之「出席率」佔20％，由服務學習組評定，每次授課時段到課點名評計，每缺曠一節扣出席率成績一分。",
+            "教科書":"-"
+        },
+        "計算機程式設計實習":{
+            "授課教師":"黃建宏",
+            "上課地點":"(BGC0513)生物資訊實驗室",
+            "LOCATION":"BGC0513",
+            "上課時間":{
+                "星期一":[5,6,7]
+            },
+            "評量標準":"平常表現 45% 期中上機考 25% 期末上機考 30%",
+            "教科書":"-"
+        },
+        "Linux實務":{
+            "授課教師":"游允帥",
+            "上課地點":"(BGC0501)基本電學與證照實驗室",
+            "LOCATION":"BGC0501",
+            "上課時間":{
+                "星期五":[6,7,8]
+            },
+            "評量標準":"日常成績 30% (隨堂練習、出席率、上課情況) 期中考 30% 期末實作報告 40%",
+            "教科書":"Ubuntu17完全自學手"
+        },
+        "計算機程式設計":{
+            "授課教師":"黃建宏",
+            "上課地點":"(BGC0601)IC設計實驗室",
+            "LOCATION":"BGC0601",
+            "上課時間":{
+                "星期一":[4],
+                "星期四":[3,4]
+            },
+            "評量標準":"平時 : 45% (點名+課堂表現+小考+作業) 期中考: 25% 期末考: 30%",
+            "教科書":"C/C++無痛學習教本"
+        },
+        "計算機概論":{
+            "授課教師":"簡銘伸",
+            "上課地點":"(BGC0614)數位學習實驗室",
+            "LOCATION":"BGC0614",
+            "上課時間":{
+                "星期四":[2],
+                "星期五":[3,4]
+            },
+            "評量標準":"期中考佔30% 期末考佔30% 平時分數佔40%(含上課情形、平時考及作業)",
+            "教科書":"Computer Science an overview"
+        },
+        "網際網路應用與實習":{
+            "授課教師":"陳國益",
+            "上課地點":"(BGC0513)生物資訊實驗室",
+            "LOCATION":"BGC0513",
+            "上課時間":{
+                "星期三":[2,3,4]
+            },
+            "評量標準":"出席率：20％作業：30％期中考：25％期末考：25％",
+            "教科書":"網路管理與應用認證實戰寶典"
+        },
+        "資訊工程導論":{
+            "授課教師":"蔡柏祥",
+            "上課地點":"(BGC0601)IC設計實驗室",
+            "LOCATION":"BGC0601",
+            "上課時間":{
+                "星期二":[5,6],
+                "星期三":[1]
+            },
+            "評量標準":"1. 期中考試: 40% 2. 期末考試: 40% 3. 上課參與情況: 20%",
+            "教科書":"-"
+        },
+        "通識教育講座":{
+            "授課教師":"待聘",
+            "上課地點":"ASA0101",
+            "LOCATION":"ASA0101",
+            "上課時間":{
+                "星期三":[7,8]
+            },
+            "評量標準":"?",
+            "教科書":"-"
+        }
+    }
+
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>{{TODAY_date}}</title>
+<meta charset="UTF-8">
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/layout.css' %}" type="text/css">
+
+<script src="{% static 'styles/scripts/jquery.mjs' %}"></script>
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+<script type="text/javascript">
+setInterval(function() {
+        $.ajax({
+  url: "{% url "index" %}",
+  success: function(data) {
+      console.log("A")
+  $('body').html(data);
+  }
+});
+    }, 600*1000)
+
+</script>
+</head>
+<body>
+<div class="wrapper row1" id="refresh">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">Basic 90</a></h1>
+      <h2>Free HTML5 Website Template</h2>
+    </div>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Search:</legend>
+        <input type="text" value="Search Our Website&hellip;" onFocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;">
+        <input type="submit" id="sf_submit" value="submit">
+      </fieldset>
+    </form>
+    <nav>
+      <ul>
+        <li><a href="#">Text Link</a></li>
+        <li><a href="#">Text Link</a></li>
+        <li><a href="#">Text Link</a></li>
+        <li><a href="#">Text Link</a></li>
+        <li class="last"><a href="#">Text Link</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- Slider -->
+    <section id="slider" class="clear">
+      <figure><iframe src="https://calendar.google.com/calendar/embed?src=nfu.edu.tw_v8hham7ijjiqrm9slb67u8refg%40group.calendar.google.com&ctz=Asia%2FTaipei" style="border: 0;width:630px;height:400px" frameborder="0" scrolling="no"></iframe>
+
+        <figcaption id="refresh">
+            <h5>今日事件({{daily|length}})</h2>
+            {% for event in daily %}
+                <p>{{event.start.date}}{{event.start.dateTime}} ~ {{event.end.date}}{{event.end.dateTime}}<br>{{event.summary}}</p>
+            {% empty %}
+                <p>無</p>
+            {% endfor %}
+            <h5>近七日內事件({{weekly|length}})</h2>
+            {% for event in weekly %}
+                <p>{{event.start.date}}{{event.start.dateTime}} ~ {{event.end.date}}{{event.end.dateTime}}<br>{{event.summary}}</p>
+            {% empty %}
+                <p>無</p>
+            {% endfor %}
+          <footer class="more"><a href="#">Read More &raquo;</a></footer>
+        </figcaption>
+      </figure>
+    </section>
+    <div style="text-align:center;font-size:16px;color:black;">{{LASTUPDATE}} 最後更新日期</div>
+    <!-- main content -->
+    <div id="intro">
+      <section class="clear"  id="refresh">
+        <!-- article 1 -->
+        <article class="left_quarter">
+            <table border="1">
+            <tr>
+            <td height="60px" width="126px" align="center"><span style="font-family: '標楷體';font-size: 13px; color: black;">{{todayis}}<br>
+            <span style="font-family: '標楷體';font-size: 11px; color: #989898;">今日課表</span></span></td>
+            </tr>
+            {% for class in daily_classes %}
+                <tr>
+                <td height="60px" width="126px" style="background-color: {% if class.isNowClass%} #FFA500 {% else %} #FFFFFF {% endif %}"><span style="font-family: '標楷體';font-size: 13px; color: black;">{{class.class_name}}</span>
+                <br><span style="font-family: '標楷體';font-size: 11px; color: #989898;">{{class.book}}</span></td>
+                </tr>
+            {% endfor %}
+
+            </table>
+        </article>
+        <!-- article 2 -->
+        <article class="left_quarter right_quarter">
+          <figure>
+          <table border="1">
+          <tr>
+          <td height="60px" width="126px"></td>
+          <td height="60px" width="126px" align="center" style="font-family:'標楷體';font-size: 13px; color: black;">星期一</td>
+          <td height="60px" width="126px" align="center" style="font-family:'標楷體';font-size: 13px; color: black;">星期二</td>
+          <td height="60px" width="126px" align="center" style="font-family:'標楷體';font-size: 13px; color: black;">星期三</td>
+          <td height="60px" width="126px" align="center" style="font-family:'標楷體';font-size: 13px; color: black;">星期四</td>
+          <td height="60px" width="126px" align="center" style="font-family:'標楷體';font-size: 13px; color: black;">星期五</td>
+          </tr>
+            {% for row in wd %}
+            <tr>
+
+                {% for class in row %}
+                <td height="60px" width="126px" align="center" style="background-color: {% if class.isNowClass%} #FFA500 {% else %} #FFFFFF {% endif %}"><span style="font-family: '標楷體';font-size: 13px; color: black;">{{class.class_name}}</span>
+                <br><span style="font-family: '標楷體';font-size: 11px; color: #989898;">{{class.location}}</span></td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+
+            </table>
+          </figure>
+        </article>
+      </section>
+    </div>
+    <!-- ########################################################################################## -->
+    <!-- ########################################################################################## -->
+    <!-- ########################################################################################## -->
+    <!-- ########################################################################################## -->
+    <div id="homepage" class="last clear">
+      <section class="one_quarter">
+        <h2 class="title">From The Blog</h2>
+        <article>
+          <header>
+            <h2>Post Title</h2>
+            <address>
+            <a href="#">Admin</a>, domainname.com
+            </address>
+            <time datetime="2000-04-06">Friday, 6<sup>th</sup> April 2000</time>
+          </header>
+          <p>Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.</p>
+          <footer class="more"><a href="#">Read More &raquo;</a></footer>
+        </article>
+      </section>
+      <section class="one_quarter">
+        <h2 class="title">Quick Links</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Amet consectetur</a></li>
+            <li><a href="#">Praesent vel sem id</a></li>
+            <li><a href="#">Curabitur hendrerit est</a></li>
+            <li class="last"><a href="#">Sed a nulla urna</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="two_quarter lastbox">
+        <h2 class="title">About US</h2>
+        <img class="imgl" src="{% static 'styles/images/demo/130x130.gif' %}" width="130" height="130" alt="">
+        <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit.</p>
+        <footer class="more"><a href="#">Read More &raquo;</a></footer>
+      </section>
+    </div>
+    <!-- / content body -->
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+  </footer>
+</div>
+</body>
+</html>
+
