@@ -14,7 +14,7 @@ from google.auth.transport.requests import Request
 import datetime
 import webbrowser
 
-BASE_DIR = '/home/pi/Desktop/NFU CISE B/mysite/mysite/'
+
 
 
 def gtime(event):
@@ -64,8 +64,8 @@ def main():
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
-    if os.path.exists(BASE_DIR+'token.pickle'):
-        with open(BASE_DIR+'token.pickle', 'rb') as token:
+    if os.path.exists('token.pickle'):
+        with open('token.pickle', 'rb') as token:
             creds = pickle.load(token)
 
     service = build('calendar', 'v3', credentials=creds)
